@@ -39,7 +39,7 @@ style: """
       background: rgba(#000, 0.3)
 	  
     .col3
-      background: rgba(#000, 0.2)
+      background: rgba(#000, 0.4)
 
     p
       padding: 0
