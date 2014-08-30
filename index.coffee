@@ -33,18 +33,18 @@ style: """
       position: relative
 
     .col1
-      background: rgba(#000, 0.2)
+      background: rgba(#000, 0.5)
 		
     .col2
-      background: rgba(#000, 0.3)
+      background: rgba(#000, 0.6)
 	  
     .col3
-      background: rgba(#000, 0.4)
+      background: rgba(#000, 0.7)
 
     p
       padding: 0
       margin: 0
-      font-size: 11px
+      font-size: 12px
       font-weight: normal
       max-width: 100%
       color: #ddd
@@ -64,7 +64,7 @@ render: -> """
 
 update: (output, domEl) ->
   values = output.split(' ')
-  table     = $(domEl).find('table')
+  table	= $(domEl).find('table')
 
   renderValue = (battery, index, label) ->
     "<div class='value'>" +
