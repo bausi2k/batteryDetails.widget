@@ -1,10 +1,10 @@
 command: "pmset -g batt | grep \"%\" | awk 'BEGINN { FS = \";\" };{ print $1,$2,$3 }' | sed -e 's/-I/I/' -e 's/-0//' -e 's/;//' -e 's/;//'"
 
-refreshFrequency: 1000
+refreshFrequency: 10000
 
 style: """
-    top: 100px
-    left: 700px
+    top: 330px
+    left: 600px
     color: #fff
     font-family: Helvetica Neue
 
@@ -15,6 +15,7 @@ style: """
       &:after
         content: 'battery'
         position: absolute
+		font-size: 14
         left: 0
         top: -14px
         font-size: 12px
@@ -36,16 +37,16 @@ style: """
       background: rgba(#000, 0.5)
 		
     .col2
-      background: rgba(#000, 0.6)
+      background: rgba(#000, 0.5)
 	  
     .col3
-      background: rgba(#000, 0.7)
+      background: rgba(#000, 0.5)
 
     p
       padding: 0
       margin: 0
       font-size: 12px
-      font-weight: normal
+      font-weight: light
       max-width: 100%
       color: #ddd
       text-overflow: ellipsis
@@ -69,7 +70,7 @@ update: (output, domEl) ->
   renderValue = (battery, index, label) ->
     "<div class='value'>" +
       "#{battery}" +
-      "<p class=label> #{label}</p>" +
+      "<p class=label>#{label}</p>" +
     "</div>"
 
   for value, i in values
